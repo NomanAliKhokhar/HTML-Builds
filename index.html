@@ -37,14 +37,12 @@
 
       function sendCommandToAndroid() {
 		
-			console.log("Hello, world!");
-			unityShowBanner('Hello from JavaScript','warning', )
-		
+			console.log("show_rateus command received from the game");		
 		
             if (window.Android) {
 			
                 // Calls Android's showToast method
-                window.Android.showToast("Hello from JavaScript!");
+                window.Android.ReceiveCommand("show_rateus");
             }
         }
 
