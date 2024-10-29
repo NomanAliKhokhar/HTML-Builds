@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game View Overlay</title>
+</head>
+<body>
+    <h1>HTML Game</h1>
+    <button onclick="sendMessageToAndroid()">Send Message to Android</button>
+    <button onclick="fetchDataFromAndroid()">Fetch Data from Android</button>
+
+    <script>
+        function sendMessageToAndroid() {
+            if (window.Android) {
+                // Calls Android's showToast method
+                window.Android.showToast("Hello from JavaScript!");
+            }
+        }
+
+        function fetchDataFromAndroid() {
+            if (window.Android) {
+                // Calls Android's getDataFromAndroid method and logs the returned data
+                const data = window.Android.getDataFromAndroid();
+                console.log("Received from Android:", data);
+            }
+        }
+    </script>
+</body>
+</html>
