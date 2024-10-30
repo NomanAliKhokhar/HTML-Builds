@@ -31,19 +31,6 @@
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var warningBanner = document.querySelector("#unity-warning");
 
-
-      function sendCommandToAndroid() {
-		
-			console.log("openGL command received!");
-			
-            if (window.Android) {
-			
-                // Calls Android's showToast method
-                window.Android.ReceiveCommand("show_rateus");
-            }
-        }
-
-
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
       // If type=='warning', a yellow highlight color is used.
@@ -69,11 +56,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/horror-tycoon - HTML - HtmlRatingFlow.loader.js";
+      var loaderUrl = buildUrl + "/HTML-Builds.loader.js";
       var config = {
-        dataUrl: buildUrl + "/horror-tycoon - HTML - HtmlRatingFlow.data.gz",
-        frameworkUrl: buildUrl + "/horror-tycoon - HTML - HtmlRatingFlow.framework.js.gz",
-        codeUrl: buildUrl + "/horror-tycoon - HTML - HtmlRatingFlow.wasm.gz",
+        dataUrl: buildUrl + "/HTML-Builds.data",
+        frameworkUrl: buildUrl + "/HTML-Builds.framework.js",
+        codeUrl: buildUrl + "/HTML-Builds.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Cybernaut Games",
         productName: "My Horror House",
@@ -102,7 +89,7 @@
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
 
-       // unityShowBanner('WebGL builds are not supported on mobile devices.');
+        unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
