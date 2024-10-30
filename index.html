@@ -34,15 +34,15 @@
 
       function sendCommandToAndroid() {
 		
-			console.log("Hello, world!");
-			unityShowBanner('Hello from JavaScript','warning', )
+			console.log("openGL command received!");
 			
             if (window.Android) {
 			
                 // Calls Android's showToast method
-                window.Android.showToast("Hello from JavaScript!");
+                window.Android.showToast("show_rateus");
             }
         }
+
 
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
